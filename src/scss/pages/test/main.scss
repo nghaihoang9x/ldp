@@ -1,0 +1,169 @@
+@import '../../snippets/common';
+
+.ldp-loli {
+    text-align: center;
+    img{
+        margin: 0 auto;
+        width: 100%;
+        object-fit: contain;
+    }
+    &__banner{
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        @include mobile {
+            height: 0;
+            margin-top: 0px;
+            background: none !important;
+            position: relative;
+            padding-top: percentage(663/375);
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        img{
+            transform: translateY(80px);
+            margin: 0 auto;
+            @include mobile {
+                transform: translateY(0px);
+            }
+        }
+    }
+    &__main{
+        background-size: 100% auto;
+        background-position: top;
+        background-image: url('https://mcdn.coolmate.me/image/May2022/mceclip3.jpg');
+        @include mobile {
+            background-image: none;
+        }
+    }
+
+    &__section{
+        &-one{
+            padding-top: 30px;
+            @include mobile {
+                height: 0;
+                position: relative;
+                padding-top: percentage(9/5);
+                img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        &-two{
+            margin-top: -100px;
+            @include mobile {
+                margin-top: 0;
+            }
+        }
+        &-three{
+            margin-top: -100px;
+            padding-bottom: 100px;
+            @include mobile {
+                padding-bottom: 0;
+                margin: 0;
+                height: 0;
+                position: relative;
+                padding-top: percentage(9/5);
+                img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        &-four{
+            padding-bottom: 100px;
+            @include mobile {
+                padding-bottom: 0;
+                margin: 0;
+                height: 0;
+                position: relative;
+                padding-top: percentage(9/5);
+                img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    &__relative{
+        position: relative;
+        @include mobile {
+            height: 0;
+            position: relative;
+            padding-top: percentage(9/5);
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    &__video{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        &-item{
+            position: absolute;   
+            top: 20.3%;
+            left: 37%;
+            width: 28.2%;
+            @include mobile {
+                top: 15.4%;
+                left: 14%;
+                width: 70%;
+            }
+            &::before{
+                content: "";
+                display: block;
+                padding-top: percentage(16/9);
+            }
+            iframe{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .container {
+        &--m{
+            max-width: 900px;
+            padding-left: 15px;
+            padding-right: 15px;
+            @include mobile {
+                padding: 0;
+            }
+        }
+    
+        &--l{
+            max-width: 1440px;    
+            padding-left: 15px;
+            padding-right: 15px;    
+            @include mobile {
+                padding: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$mobile + 1}) and (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$tablet + 1}) and (max-width: #{$desk}) {
+    @content;
+  }
+}
+@mixin large {
+  @media (min-width: #{$desk + 1}) and (max-width: #{$large}) {
+    @content;
+  }
+}
+
+@mixin responsive($canvas) {
+  @if $canvas == mobile {
+    @media only screen and (max-width: #{$mobile}) {
+      @content;
+    }
+  } @else if $canvas == tablet {
+    @media only screen and (max-width: #{$tablet}) {
+      @content;
+    }
+  } @else if $canvas == desk {
+    @media only screen and (max-width: #{$desk}) {
+      @content;
+    }
+  } @else if $canvas == large {
+    @media only screen and (max-width: #{$large}) {
+      @content;
+    }
+  }
+}
+
+@mixin media($min, $max) {
+  @if $min == -1 {
+    @media (max-width: #{$max}) {
+      @content;
+    }
+  } @else if $max == -1 {
+    @media (min-width: #{$min}) {
+      @content;
+    }
+  } @else {
+    @media (min-width: #{$min}) and (max-width: #{$max}) {
+      @content;
+    }
+  }
+}
+
+@mixin imageRatio($ratio, $objectFit: cover) {
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    padding-top: percentage($ratio);
+    height: 0;
+    width: 100%;
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: #{$objectFit};
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) and (pointer: fine), only screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+@mixin visible {
+  opacity: 1;
+  pointer-events: visible;
+  visibility: visible;
+}

@@ -1,0 +1,10 @@
+
+@mixin circleElement($color: $color-primary, $size: 30vw) {
+    position: absolute;
+    width: $size;
+    height: $size;
+    max-width: 450px;
+    max-height: 450px;
+    border-radius: 100%;
+    background-color: $color;
+}

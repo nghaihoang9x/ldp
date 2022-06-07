@@ -1,0 +1,176 @@
+// Flexbox
+.flex {
+  display: flex;
+  &--space {
+    flex: 1;
+  }
+  &--column {
+    flex-flow: column;
+  }
+  &--row {
+    flex-flow: row;
+  }
+  &--wrap {
+    flex-wrap: wrap;
+  }
+}
+.justify {
+  &--center {
+    justify-content: center;
+  }
+  &--around {
+    justify-content: space-around;
+  }
+  &--between {
+    justify-content: space-between;
+  }
+  &--start {
+    justify-content: flex-start;
+  }
+  &--end {
+    justify-content: flex-end;
+  }
+}
+.align {
+  &--center {
+    align-items: center;
+  }
+  &--start {
+    align-items: flex-start;
+  }
+  &--end {
+    align-items: flex-end;
+  }
+}
+
+// Text styles
+.text {
+  &--black {
+    font-weight: 900;
+  }
+  &--bold {
+    font-weight: 700;
+  }
+  &--simi {
+    font-weight: 600;
+  }
+  &--medium {
+    font-weight: 500;
+  }
+  &--normal {
+    font-weight: 400;
+  }
+  &--light {
+    font-weight: 300;
+  }
+  &--extra-light {
+    font-weight: 200;
+  }
+  &--italic {
+    font-family: $primary-font-italic;
+  }
+
+  &--upper {
+    text-transform: uppercase;
+  }
+  &--lower {
+    text-transform: lowercase;
+  }
+  &--title {
+    text-transform: capitalize;
+  }
+  &--nowrap {
+    white-space: nowrap;
+  }
+  &--strikethrough {
+    text-decoration: line-through;
+  }
+
+  &--white {
+    color: #fff;
+  }
+
+  &--dark {
+    color: $color-text;
+  }
+
+  &--primary {
+    color: $color-secondary;
+  }
+  &--secondary {
+    color: $color-secondary-text;
+  }
+  &--green {
+    color: $color-green;
+  }
+  &--red {
+    color: red;
+  }
+  &--right {
+    text-align: right;
+  }
+  &--left {
+    text-align: left;
+  }
+  &--center {
+    text-align: center;
+  }
+}
+
+// List style
+.no-style {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+  }
+}
+.two-columns {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 -15px;
+  li {
+    width: 50%;
+    padding: 0 15px;
+  }
+}
+
+// Margin top
+@for $i from 1 through 10 {
+  $number: $i * 10;
+  .mgt--#{$number} {
+    margin-top: #{$number}px;
+  }
+}
+
+// Margin bottom
+@for $i from 1 through 10 {
+  $number: $i * 10;
+  .mgb--#{$number} {
+    margin-bottom: #{$number}px;
+  }
+}
+
+// Padding top
+@for $i from 1 through 10 {
+  $number: $i * 10;
+  .pdt--#{$number} {
+    padding-top: #{$number}px;
+  }
+}
+
+// Padding bottom
+@for $i from 1 through 10 {
+  $number: $i * 10;
+  .pdb--#{$number} {
+    padding-bottom: #{$number}px;
+  }
+}
+
+// Padding
+@for $i from 1 through 10 {
+  $number: $i * 10;
+  .pd--#{$number} {
+    padding: #{$number}px;
+  }
+}

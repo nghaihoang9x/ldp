@@ -1,0 +1,17 @@
+
+$font-size: (
+    xxl: $font-size-default * 3.5,
+    xl: ceil($font-size-default * 3.5 * 0.88),
+    lg: $font-size-default * 2.5,
+    md: $font-size-default / 0.48,
+    sm: $font-size-default * 1.5,
+    xs: $font-size-default * 1.25,
+    mobile: (
+        xxl: $font-size-default * 3,
+        xl: $font-size-default * 2,
+        lg: $font-size-default * 2.5,
+        md: $font-size-default / 0.48,
+        sm: $font-size-default * 1.5,
+        xs: $font-size-default * 1.25,
+    )
+);

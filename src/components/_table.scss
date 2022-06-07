@@ -1,0 +1,105 @@
+
+.table-sizechart {
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid $color-border;
+    border-radius: 48px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.03em;
+    color: #000000;
+    @include mobile {
+        font-size: 12px;
+        line-height: 14px;
+        border-radius: 16px;
+    }
+    td {
+        border: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+        @include mobile {
+            padding-left: 7px;
+            padding-right: 7px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        &:first-of-type {
+            padding-left: 30px;
+            @include mobile {
+                padding-left: 15px;
+                font-size: 10px;
+                line-height: 12px;
+            }
+        }
+    }
+    thead {
+        td {
+            height: 96px;
+            background-color: $color-primary;
+            border-bottom: 1px solid $color-border;
+            @include mobile {
+                height: 60px;
+            }
+            &:first-of-type {
+                border-bottom-left-radius: 48px;
+                border-top-left-radius: 48px;
+                @include mobile {
+                    border-bottom-left-radius: 16px;
+                    border-top-left-radius: 16px;
+                }
+            }
+            &:last-of-type {
+                border-bottom-right-radius: 48px;
+                border-top-right-radius: 48px;
+                @include mobile {
+                    border-bottom-right-radius: 16px;
+                    border-top-right-radius: 16px;
+                }
+            }
+            .sub-text {
+                display: block;
+                width: 100%;
+                font-size: 12px;
+                font-weight: normal;
+                white-space: nowrap;
+                @include mobile {
+                    font-size: 8px;
+                    line-height: 12px;
+                }
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                height: 55px;
+                &:first-of-type {
+                    text-transform: uppercase;
+                }
+            }
+            + tr {
+                td {
+                    border-top: 1px solid $color-border;
+                }
+            }
+        }
+    }
+}
+
+.ldp-table {
+    padding-bottom: 30px;
+    &__heading {
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 32px;
+        text-transform: capitalize;
+        color: #000000;
+        margin-bottom: 15px;
+        text-align: center;
+        @include mobile {
+            font-size: 24px;
+            line-height: 1.5em;
+        }
+    }
+}

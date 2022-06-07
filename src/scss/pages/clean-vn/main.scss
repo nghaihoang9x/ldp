@@ -1,0 +1,514 @@
+@import '../../snippets/common';
+
+$color-primary: #006CBC;
+$color-secondary: #39A845;
+
+
+.homepage-excool {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.homepage-excool .about-card {
+    background-color: #006CBC;
+    color: #fff;
+}
+
+.homepage-excool .about-card__heading {
+    color: #fff;
+}
+
+.homepage-excool .about-card__image {
+    overflow: visible;
+    position: relative;
+    background-color: #fff;
+}
+
+.homepage-excool .about-card__image img {
+    border-radius: 50px;
+    opacity: 0;
+    height: 557px;
+}
+
+.home-tab__header {
+    display: none;
+}
+
+.homepage-excool .about-card__image:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://mcdn.coolmate.me/image/April2022/mceclip0_13.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transform: scale(1.3);
+}
+
+.homepage-coolclub {
+    background-image: url("https://mcdn.coolmate.me/image/April2022/mceclip0_84.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.homepage-about .about-card {
+    background-color: #39A845;
+    color: #fff;
+}
+
+.homepage-about .about-card__heading {
+    color: #fff;
+}
+
+.homepage-about .about-card__image img {
+    height: 556px;
+}
+
+.homepage-demin {
+    margin-bottom: 50px;
+}
+
+.homepage-demin .about-card {
+    background-image: url("https://mcdn.coolmate.me/image/April2022/mceclip1_68.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 15px;
+}
+
+.homepage-demin .about-card__heading {
+    color: #fff;
+}
+
+.homepage-demin .about-card__image {
+    background-color: #fff;
+    border-radius: 50px;
+    position: relative;
+}
+
+.homepage-demin .about-card__image img {
+    width: 100%;
+    height: 553px;
+}
+
+.coolclub-abouts__heading {
+    font-size: 96px;
+}
+
+.about-card__image {
+    width: 100%;
+}
+
+.coolclub-abouts__content {
+    min-height: 398px;
+}
+
+@keyframes spin {
+    0% {
+        background-position-x: 0px;
+    }
+
+    100% {
+        background-position-x: 60vh;
+    }
+}
+
+@keyframes spinmb {
+    0% {
+        background-position-x: 0px;
+    }
+
+    100% {
+        background-position-x: 70vw;
+    }
+}
+
+.earth__item {
+    position: relative;
+    box-shadow: 0 0 3px 0px #006CBC;
+    border-radius: 100%;
+}
+
+.earth__item:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+    width: 100%;
+}
+
+.earth__item:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://mcdn.coolmate.me/image/April2022/mceclip8.jpg);
+    border-radius: 100%;
+    background-size: 60vh;
+    animation: spin 9s infinite linear;
+    transform: rotate(-15deg);
+}
+
+.earth {
+    pointer-events: none;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 30vh;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+@media screen and (max-width: 768px) {
+    .homepage-demin .about-card {
+        padding: 7px;
+    }
+
+    .coolclub-abouts__heading {
+        font-size: 32px;
+    }
+
+    .homepage-demin {
+        margin-bottom: 16px;
+    }
+
+    .about-card__image {
+        max-width: 58%;
+    }
+
+    .about-card__image img {
+        height: 100% !important;
+    }
+
+    .homepage-demin .about-card__image {
+        border-radius: 30px;
+    }
+
+    .homepage-excool {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .coolclub-abouts__content {
+        min-height: 100%;
+    }
+
+    .earth {
+        width: 36vw;
+        top: 34%;
+    }
+
+    .earth__item:after {
+        background-size: 70vw;
+        animation: spinmb 9s infinite linear;
+    }
+}
+
+.cleanVn-banner{
+    position: relative;
+    &:before {
+        content: "";
+        display: block;
+        padding-top: calc(100vh - 170px);
+        height: 0;
+        width: 100%;
+    }
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+.earth{
+    @include mobile {
+        top: 40%;
+    }
+}
+
+
+.site-cleanVn {
+    .container{
+        max-width: 1200px;
+    }
+}
+
+.cleanVn-heading{
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    @include mobile {
+        font-size: 18px;
+    }
+    span{
+        color: $color-secondary;
+    }
+}
+.cleanVn-about{
+    padding-top: 50px;
+    margin-bottom: 50px;
+    @include mobile {
+        margin-bottom: 15px;
+    }
+    &__number{
+        font-size: 70px;
+        line-height: 1em;
+        color: $color-primary;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        @include mobile {
+            font-size: 24px;
+        }
+    }
+    &__text{
+        font-size: 20px;
+        line-height: 1.25em;
+        @include mobile {
+            font-size: 14px;
+        }
+    }
+    &__content{
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+    &__count{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        @include mobile {
+            &:nth-of-type(1){
+                width: 40%;
+            }
+        }
+        & + & {
+            margin-top: 30px;
+            @include mobile {
+                margin-top: 0;
+            }
+        }
+    }
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+        @include mobile {
+            flex-flow: wrap;
+        }
+    }
+    &__icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        @include mobile {
+            flex: 0 0 30px;
+            width: 30px;
+            height: 30px
+        }
+    }
+    &__image{
+        @include imageRatio(2/3);
+    }
+}
+
+.cleanVn-content{
+    background-image: url('https://mcdn.coolmate.me/image/April2022/mceclip2_3.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    padding-bottom: 10px;
+    @media (max-width: 1440px) and (min-width: $mobile) {
+        padding-left: 200px;
+    }
+}
+
+
+.cleanVn-solution{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    @include mobile {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    &__heading{
+        margin-bottom: 40px;
+        @include mobile {
+            margin-bottom: 15px;
+        }
+    }
+    &__image{
+        @include imageRatio(828/1064);
+    }
+    &__description{
+        line-height: 2em;
+        @include mobile {
+            text-align: center;
+            margin-bottom: 0;
+        }
+    }
+}
+.cleanVn-projects{
+    &__image{
+        @include imageRatio(702/998)
+    }
+    &__description{
+        line-height: 2em;
+        @include mobile {
+            text-align: center;
+        }
+    }
+    &__number{
+        font-size: 30px;
+        color: $color-primary;
+        font-weight: bold;
+    }
+    &__heading{
+        margin-bottom: 40px;
+        @include mobile {
+            margin-bottom: 15px;
+        }
+    }
+    &__hightline{
+        background-color: $color-primary;
+        color: #fff;
+        padding: 3px 5px;
+    }
+    &__content{
+        padding-left: 50px;
+        @include mobile {
+            padding-left: 0;
+        }
+    }
+    
+}
+.cleanVn-different{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    @include mobile {
+        margin-top: 15px;
+    }
+    &__heading{
+        margin-bottom: 50px;
+        @include mobile {
+            margin-bottom: 15px;
+        }
+    }
+    &__image{
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+.cleanVn-together{
+    @media (max-width: 1300px) and (min-width: $mobile) {
+        padding-left: 200px;
+    }
+    &__heading{
+        font-size: 36px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+        font-weight: normal;
+        @include mobile {
+            font-size: 22px;
+        }
+        span{
+            font-size: 50px;
+            font-weight: bold;
+            color: $color-primary;
+            font-weight: bold;
+            @include mobile {
+                font-size: 28px;
+            }
+        }
+    }
+    &__image{
+        @include imageRatio(405/1440);
+    }
+}
+
+.scroll-bar{
+    position: fixed;
+    z-index: 9;
+    left: 15px;
+    top: 50%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    transform: translate3d(0,-50%,0);
+    height: 600px;
+    width: 25px;
+    background-color: #39A845;
+    border-radius: 100px;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: all .3s;
+
+    @include mobile {
+        top: 0;
+        left: 0;
+        transform: translate3d(0,0,0);
+        width: 100%;
+        height: 50px;
+        padding: 0;
+        flex-flow: row;
+        // padding-top: 20px;
+        border-radius: 0;
+        // background-color: #333;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-x;
+    }
+
+    &.is-active{
+        opacity: 1;
+        visibility: visible;
+        pointer-events: visible;
+    }
+    
+    &__item {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        white-space:  nowrap;
+        font-size: 15px;
+        @include mobile {
+            color: #fff;
+            font-size: 14px;
+        }
+        &::before{
+            content: "";
+            display: block;
+            height: 2px; 
+            background-color: #fff;
+            margin-right: 10px;
+            margin-left: 8px;
+            padding: 0 7px;
+        }
+        &:hover,&.is-active{
+            color: #000;
+            text-decoration: underline;
+            @include mobile {
+                color: #fff;
+            }
+        }
+    }
+}

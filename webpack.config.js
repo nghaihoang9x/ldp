@@ -24,8 +24,8 @@ module.exports = () => {
         // Path and filename of your result bundle.
         // Webpack will bundle all JavaScript into this file
         output: {
-            path: path.resolve(__dirname, 'public'),
-            filename: `${template}/assets/main.js`
+            path: path.resolve(__dirname, 'public/' + template),
+            filename: `assets/main.js`
         },
         devServer: {
             hot: true,
@@ -129,20 +129,20 @@ module.exports = () => {
         },
         plugins: [
             new MiniCssExtractPlugin({
-                filename: "./[name]/assets/css/main.css"
+                filename: `./assets/css/main.css`
             }),
 
             new HtmlWebpackPlugin({
                 template: path.resolve(__dirname, `src/pages/${template}/index.html`),
-                filename: `${template}/index.html`,
+                filename: `index.html`,
                 minify: false,
             }),
             new HtmlWebpackDeployPlugin({
-                assets: {
-                  copy: [{ from: path.resolve(__dirname, `src/pages/${template}/assets`), to: `assets` }],
+                asets: {
+                  copy: [{ from: path.resolve(__dirname, `src/pages/${template}/assets`) }],
                 },
                 useAssetsPath: true,
-                addAssetsPath: assetPath => path.join(template, assetPath),
+                // addAssetsPath: assetPath => path.join('/', assetPath),
               })
         ],
         externals: {

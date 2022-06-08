@@ -133,7 +133,7 @@ module.exports = () => {
             }),
 
             new HtmlWebpackPlugin({
-                template: path.resolve(__dirname, `src/pages/${template}/index.html`),
+                template: path.resolve(__dirname, `src/pages/${template}/main.html`),
                 filename: `index.html`,
                 minify: false,
             }),

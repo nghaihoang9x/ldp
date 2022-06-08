@@ -204,6 +204,9 @@ body {
                 height: 300px;
             }
         }
+        .ldp-banner{
+            padding-top: percentage(169/300);
+        }
 
         &__heading {
             display: flex;

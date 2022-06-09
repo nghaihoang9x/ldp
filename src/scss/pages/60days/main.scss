@@ -9,9 +9,12 @@
 
 html,
 body {
-    font-size: 18px;
+    font-size: 18px !important;
+    @include tablet {
+        font-size: 16px !important;
+    }
     @include mobile {
-        font-size: 14px;
+        font-size: 14px !important;
     }
 }
 
@@ -75,6 +78,7 @@ body {
         }
         &__banner{
             padding: 0 1em;
+            text-align: center;
         }
     }
 
@@ -112,16 +116,20 @@ body {
                 }
             }
         }
+        &__count{
+            @include mobile {
+                display: flex;
+                flex-flow: column;
+                background-color: #fff;
+                box-shadow: 0 0 10px 0 $color-shadow;
+                padding: 0.2em 0 1em;
+                border-radius: 1rem;
+            }
+        }
         &__number {
             font-size: map-get($font-size, "xxl");
             font-weight: bold;
             color: $color-primary;
-            @include mobile {
-                background-color: #fff;
-                box-shadow: 0 0 10px 0 $color-shadow;
-                padding: 0.2em 0;
-                border-radius: 1rem;
-            }
         }
         &__content{
             @include mobile {
@@ -220,17 +228,22 @@ body {
             text-align: center;
             color: $color-primary;
             margin-bottom: 1em;
+            font-size: map-get($font-size, sm);
             span {
                 font-size: map-get($font-size, md);
                 font-weight: bold;
             }
         }
         &__description {
-            text-align: center;
+            ul {
+                padding-left: 1.2em;
+                font-size: 0.8rem;
+            }
         }
     }
 
     .ldp-return {
+        padding-bottom: 2rem;
         position: relative;
         background: linear-gradient(#fff, $color-gradient);
         &::before {
@@ -250,7 +263,7 @@ body {
         }
         &__wrapper {
             position: relative;
-            border: 2px solid #000;
+            // border: 2px solid #000;
             padding: 2em;
             border-radius: 1em;
             z-index: 1;
@@ -263,8 +276,14 @@ body {
 
             .ldp-heading{
                 font-size: map-deep-get($font-size,lg);
+                @include mobile {
+                    font-size: map-deep-get($font-size,mobile,lg);
+                }
                 b{
                     font-size: map-deep-get($font-size,xl);
+                    @include mobile {
+                        font-size: map-deep-get($font-size,mobile,xxl);
+                    }
                 }
             }
         }
@@ -277,6 +296,20 @@ body {
                 font-size: map-deep-get($font-size,mobile,xs);
                 font-weight: bold;
                 margin-top: 0.75em;
+            }
+        }
+
+        &__description{
+            margin-top: 1em;
+            p {
+                margin: 0;
+            }
+            ul {
+                margin: 0;
+                padding-left: 1em;
+                li {
+                    margin: 0;
+                }
             }
         }
 
@@ -345,6 +378,10 @@ body {
         flex: 1;
         padding: 2rem;
         max-width: 400px;
+        @include tablet {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
         @include mobile {
             padding-top: 1rem;
             padding-bottom: 1.5rem;
